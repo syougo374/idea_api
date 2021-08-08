@@ -1,0 +1,21 @@
+<input type="text">
+<button>sousin</button>
+<%= form_with(model: @category, remote: true) do |f| %>
+  <%= f.text_field :name, date:'aaa',placeholder:'アイデア'  %>
+  <%= f.submit '送信' %>
+<% end %>
+<%= field_for(model: @category, remote: true) do |f| %>
+  <%= f.text_field :body, date:'aaa',placeholder:'カテゴリ'  %>
+<% end %>
+
+<script>
+  //検証
+  var data = [{
+    name : 'kobayashi',
+    body : '仕事',
+  }];
+
+  // 利用
+  console.log(data[0].body);
+
+</script>
